@@ -9,14 +9,8 @@ export default [
   },
   {
     path: '/home',
-    component: MainLayout,
-    children: [
-      {
-        path: '',
-        name: 'home',
-        component: () => import('@/modules/home')
-      }
-    ]
+    name: 'home',
+    component: () => import('@/modules/home')
   },
   {
     path: '/article',
