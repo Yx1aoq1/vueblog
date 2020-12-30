@@ -1,4 +1,10 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import router from '@/plugins/router'
+import App from '@/App.vue'
+import inject from '@/plugins/inject'
+import '@/styles/index.less'
 
-createApp(App).mount('#app')
+createApp(App)
+  .use(inject)
+  .use(router)
+  .mount('#app')
