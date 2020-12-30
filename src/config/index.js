@@ -14,7 +14,7 @@ export const AXIOS_DEFAULT_CONFIG = {
   headers: {
     'X-Requested-With': 'XMLHttpRequest'
   },
-  baseURL: '/'
+  baseURL: '/api'
 }
 
 // vuex 默认配置

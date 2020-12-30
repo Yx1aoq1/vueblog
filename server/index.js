@@ -20,6 +20,6 @@ module.exports = function (app) {
   app.use(bodyParser.urlencoded({extended: false}))
   Object.keys(apis).forEach(key => {
     const api = apis[key]
-    app.use(`/${key}`, api)
+    app.use(`/api/${key}`, api)
   })
 }
