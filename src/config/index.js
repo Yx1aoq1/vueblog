@@ -1,10 +1,10 @@
-import { createWebHistory } from 'vue-router'
+import { createWebHashHistory } from 'vue-router'
 // 环境
 export const NODE_ENV = process.env.NODE_ENV || 'production'
 
 // 路由默认配置，路由表并不从此注入
 export const ROUTER_DEFAULT_CONFIG = {
-  history: createWebHistory()
+  history: createWebHashHistory()
 }
 
 // axios 默认配置

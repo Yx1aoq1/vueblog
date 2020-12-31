@@ -20,7 +20,7 @@ export default {
     }
   },
   created () {
-    
+    console.log(window.database)
   },
   methods: {
     

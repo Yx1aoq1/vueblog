@@ -1,3 +1,4 @@
+const MDatabasePlugin = require('./plugins/database-plugin')
 const path = require('path')
 
 function resolve(dir) {
@@ -5,9 +6,15 @@ function resolve(dir) {
 }
 
 module.exports = {
-  devServer: {
-    setup: require('./server'),
-    historyApiFallback: true
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/vueblog/'
+    : '/',
+  configureWebpack: {
+    plugins: [
+      new MDatabasePlugin({
+        path: resolve('./')
+      })
+    ]
   },
   chainWebpack: (config) => {
     config.resolve.alias
